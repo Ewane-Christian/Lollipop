@@ -1,0 +1,234 @@
+<html>
+<head>
+    <title>Practice</title>
+</head>
+    <div id="header">LOLLIPOP</div>
+<p class="text-bold">This is a paragraph</p>
+<a href="vtib-eportal.com">Visite site</a><hr>
+<img src="image/net.jpg" alt="The Boy is painting" width="40%" height="60%">
+<hr>
+<head>
+<meta charset="utf-8">
+</head>
+<p style="color:blue" font size="16px"; ><i>This is a styled paragraph</i></p>
+</html>
+
+<!Doctype html>
+    <html>
+        <head>
+        <meta charset="utf-8">
+            <title>Document</title>
+            <style>
+                body{
+                    background-color:white;
+            }
+                p{
+                    font-size: Arial, sans-serif;
+            }
+            </style>
+        </head>
+            <!---===Work with emojis===--->
+            <p>Here is a smiley face: &#128512; </p>
+            <p>This is a happy face: &#128513;</p>
+
+            <p>Once upon a time &#129517 there was a boy &#129333 called Ewane. He had friends &#128108 who were<br>
+            popular &#128372 and wished to be like them too, so he created his own title as LOLLIPOP<br>
+            which referred to him as a sweet &#127853.</p>
+            <p>His behaviour was the same as the qualities of that sweet &#127853, and just as he<br>
+            wanted he became the most popular amongst his friends.</p>
+
+            <!------===HTML Divisions===------>
+            <div style="background-color: blueviolet;">
+            <h2> We are studying divs today</h2>
+            <p>A div is a block of container</p>
+            <h4>Below is a sentence I just copied and pasted</h4>
+            <p>Here is a smiley face: &#128512; </p>
+            </div>
+
+            <div style="background-color: aqua;">
+            <h2>This is my second div</h2>
+            <p>I do this to impliment a div in such a way I can understand</p>
+            <p><b>The content is separated from the one above</b></p>
+            </div>
+
+            <div style="background-color: darkgrey;">
+            <h2>This is my third div</h2>
+            <p>The first is in blueviolet, the second in aqua, the third ib darkgrey</p>
+            </div>
+
+            <!--==Exercise==-->
+
+            <div style="background-color: palevioletred;">
+                <h1>My SCHOOL EXPERIENCES</h1>
+                <p>On my first day in school&#127979 I was so exhausted&#129516 untill I forgot&#128531<br>
+                my belongings&#128188 at home&#127968 and to attend the class like that. But luckily&#128517<br>
+                I met some friends&#128108 with who I passed my holidays and they helped with<br>
+                their materials&#128187. I learned how to code&#128076, I studied some other mathematical<br>
+                symbols like &#8720, &#8721, &#8719, &#8718, &#8717.<br>
+                To summarize, from that day i've a high performance in school&#127979.</p>
+            </div>
+
+<!---==============HTML forms================--->
+<hr><hr>
+
+<form action="#" method="post">
+    <fieldset>
+        <legend>Registration Form</legend>
+<label> Username:</label>
+    <input type="text" name="uname" placeholder="John Doe"><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="example@gmail.com"><br><br>
+
+    <label for="male">Male</label>
+    <input type="radio" name="sex" id="male"><br>
+
+    <label for="female">Female</label>
+    <input type="radio" name="sex" id="female"><br><br>
+
+    <label>Telephone:</label>
+    <input type="tel" name="tel" placeholder="695031995"><br><br>
+
+    <label>Date of birth:</label>
+    <input type="date" name="dob"><br><br>
+
+    <label>Address:</label>
+    <input type="text" name="addr" placeholder="Ange Raphael, Douala"><br><br>
+
+    <label>Country:</label>
+    <select name="ctry" id="ctry">
+        <option value="1">Cameroon</option>
+        <option value="2">Nigeria</option>
+        <option value="3">Ghana</option>
+        <option value="4">Chad</option>
+        <option value="5">South Africa</option>
+        <option value="6">Congo</option>
+        <option value="7">Ivory Coast</option>
+        <option value="8">Zimbabwe</option>
+        <option value="9">Niger</option>
+        <option value="10">Ethiopia</option>
+    </select><br><br>
+
+    <label for="status">Status</label><br><br>
+    <label for="s">Single</label>
+    <input type="radio" name="single" id="s">
+
+    <label for="m">Married</label>
+    <input type="radio" name="married" id="m">
+
+    <label for="o">Other</label>
+    <input type="radio" name="other" id="o"><br><br>
+
+    <button type="submit">Send</button>
+    </fieldset>
+</form>
+
+<!--===============================================================-->
+<hr>
+<form action="#">
+    <fieldset>
+        <legend>Login Form</legend>
+<label>Email:</label><br>
+<input type="email" name="email" required><br><br>
+
+<label>Password</label><br>
+<input type="password" name="password" required><br><br>
+
+<button type="submit">Login</button>
+
+    </fieldset>
+</form>
+<hr><hr>
+
+<!---===================New Form=================--->
+
+<form action="#" method="post">
+    <fieldset>
+    <h4>Upload Form</h4>
+    <label for="productname">Product Name</label><br>
+    <input type="text" name="prt" id="productname" required><br><br>
+
+    <label for="product">Add Product</label><br>
+    <input type="file" name="product" id="product" required><br><br>
+
+    <label for="price">Product price</label><br>
+    <input type="number" name="price" id="price" required><br><br>
+
+    <label for="qnty">Product quantity</label><br>
+    <input type="number" name="qnty" id="qnty" required><br><br>
+
+    <label for="details">Product details</label><br>
+    <textarea name="details" id="details" cols="60" rows="10"></textarea><br><br>
+
+    <label for="cat">Product category/Type</label><br>
+    <select name="category" id="cat">
+        <option value="iphone">iPhone</option>
+        <option value="itel">Itel</option>
+        <option value="tecno">Tecno</option>
+        <option value="samsung">Samsung</option>
+        <option value="google">Google</option>
+        <option value="lenovo">Lenovo</option>
+        <option value="infinix">Infinix</option>
+        <option value="redmi" selected>Redmi</option>
+
+    </select><br><br>
+
+    <input type="button" value="Submit" onclick="alert ('Form submitted')">
+
+</form>
+    </fieldset>
+
+<!--=========================Exercise=========================-->
+
+    <div style="background-color: aqua;">
+        <fieldset>
+<form action="#" method="post">
+    <center><h2>Register</h2>
+
+    <label>Name:</label>
+    <input type="name" id="name" placeholder="your name" required><br><br>
+
+    <label>Email:</label>
+    <input type="email" id="email" placeholder="your email" required><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password" required><br><br>
+
+    <label>Phone Number:</label>
+    <input type="telephone" id="telephone" required><br><br>
+
+    <label>Gender:</label>
+    <label for="male">Male:</label>
+    <input type="radio" name="gender" id="male">
+
+    <label for="female">Female:</label>
+    <input type="radio" name="gender" id="female">
+
+    <label for="other">Other:</label>
+    <input type="radio" name="gender" id="other"><br><br>
+
+    <label>Language:</label>
+    <select name="language">
+        <option>Select language</option>
+        <option>English</option>
+        <option>French</option>
+        <option>Spanish</option>
+        <option>Deutsch</option>
+        <option>Pakistan</option>
+    </select><br><br>
+
+    <label>Zip Code:</label>
+    <input type="text" name="zip code" id="zip code"><br><br>
+
+    <label>About:</label>
+    <textarea name="details" id="details" cols="25" rows="2" placeholder="Write about yourself..."></textarea><br><br>
+
+    <button type="button" value="submit" onclick="alert ('Form submitted')">Register</button>
+
+    </center>
+</form>
+    </fieldset>
+    </div>
+
+            </body>
+    </html>

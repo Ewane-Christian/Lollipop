@@ -1,0 +1,181 @@
+
+<!--=====================Form 2======================-->
+<html>
+    <head>
+        <title>Assignment</title>
+   </head>
+
+    <body>
+        <div style="background-color: greenyellow;">
+        <form action="#" method="post">
+            <center>
+                <fieldset>
+                    <h3><font style="color: orangered;">Personal Details</font></h3><br>
+
+                    <label>Name:</label>
+                    <input type="text" id="name" required><br><br>
+
+                    <label>Password:</label>
+                    <input type="password" id="password" required><br><br>
+                    
+                    <label>E-mail id:</label>
+                    <input type="email" id="email" required><br><br>
+
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label><br><br>
+
+                    <label>Contact#:</label>
+                    <input type="tel" id="tel" required><br><br>
+
+                    <h3><font style="color: orangered;">Educational Qualification</font></h3><br>
+
+                    <label>Degree:</label>
+                    <select name="degree" id="degree">
+                        <option>--Select Group--</option>
+                        <option>common Entrance</option>
+                        <option>Ordinary Level</option>
+                        <option>Advanced Level</option>
+                        <option>HND degree</option>
+                        <option>Bachelors degree</option>
+                        <option>Masters degree</option>
+                        <option>Doctorate degree</option>
+                        <option>Professor degree</option>
+                    </select><br><br>
+
+                    <label>Engineering:</label>
+                    <select name="engineering" id="engineering">
+                        <option>--Select Group--</option>
+                        <option>Software Engineering</option>
+                        <option>Computer Engineering</option>
+                        <option>Information Technology</option>
+                        <option>MIS</option>
+                    </select><br><br>
+
+                    <label>Hobbies:</label>
+
+                    <input type="checkbox" name="pc" id="pc">
+                    <label>Playing chess</label>
+
+                    <input type="checkbox" name="rb" id="rb"><br><br>
+                    <label>Reading Books</label>
+
+                    <h4 style="color: orangered;">Address</h4><br>
+                    <textarea name="addr" id="addr" cols="20" rows="3"></textarea><br><br>
+
+                    <label>Attch Resume:</label>
+                    <input type="file" name="ar" id="ar"><br><br>
+
+                    <button type="button" value="submit" onclick="alert ('Form sent')" 
+                    style="color: white; background-color: orangered;">Submit</button>
+
+                </fieldset>
+            </center>
+        </form></div>
+
+<!--===========================test===============================-->
+                    <label>Password:</label><br>
+                    <input type="password" id="password" style="border-top: none;border-right: none; border-left: none;" required><br><br>
+                    <input type="text" name="username" pattern="[a-zA-Z0-9]{4,10}"><hr><hr>
+<br><br>
+<!--=============================Table=============================-->
+
+        <center><table border="4">
+            <tr>
+                <th rowspan="4">Day</th>
+            </tr>
+
+            <tr>
+                <th colspan="3">Seminar</th>
+            </tr>
+
+            <tr>
+                <th colspan="2">Schedule</th>
+                <th rowspan="2">Topic</th>
+            </tr>
+
+            <tr>
+                <th>Begin</th>
+                <th>End</th>
+            </tr>
+
+            <tr>
+                <td rowspan="2">Monday</td>
+                <td rowspan="2" style="background-color:wheat;">8:00 a.m.</td>
+                <td rowspan="2" style="background-color:violet;">5:00 p.m.</td>
+                <td>Introduction to XML</td>
+            </tr>
+
+            <tr>
+                <td>Validity: DTD and Relax NG</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">Tuesday</td>
+                <td style="background-color:wheat;">8:00 a.m.</td>
+                <td style="background-color:wheat;">11:00 a.m.</td>
+                <td rowspan="1" style="text-align: center;">XPath</td>              
+            </tr>
+                <td style="background-color:wheat;">11:00 a.m.</td>
+                <td style="background-color:yellowgreen;">2:00 p.m.</td>
+                <td rowspan="2">XSL Transformations</td>
+            <tr>
+                <td style="background-color:yellowgreen;">2:00 p.m.</td>
+                <td style="background-color:violet;">5:00 p.m.</td>
+            </tr>
+
+            <tr>
+                <td>Wednesday</td>
+                <td style="background-color:wheat;">8:00 a.m.</td>
+                <td style="background-color:yellowgreen;">12:00 p.m.</td>
+                <td rowspan="1">XSL Formatting Objects</td>
+            </tr>            
+        </table></center>
+<br><br><hr><hr>
+
+<!--===========================test===============================-->
+<br><br>
+
+        <style>
+            section{
+                width: auto;
+                float: left;
+                padding: 0px;                
+            }
+        </style>
+
+        <div id="section">
+            <img src="Image/5gball.jpg" alt="The Boys" width="auto" height="auto">
+        </div>
+
+        <div id="section">
+            <h2>Sign Up</h2><br>
+
+            <label>Full Name</label><br>
+            <input type="text" id="fname" placeholder="Name..." style="border-top: none;border-right: none; border-left: none;" required><br><br>
+
+            <label>Email</label><br>
+            <input type="email" id="email" placeholder="Email address" style="border-top: none;border-right: none; border-left: none;" required><br><br>
+
+            <label>Username</label><br>
+            <input type="text" id="uname" placeholder="Username..." style="border-top: none;border-right: none; border-left: none;" required><br><br>
+
+            <label>Password</label><br>
+            <input type="password" id="password" placeholder="*************" style="border-top: none;border-right: none; border-left: none;" required><br><br>
+
+            <label>Repeat Password</label><br>
+            <input type="password" id="password" placeholder="*************" style="border-top: none;border-right: none; border-left: none;" required><br><br>
+
+            <input type="checkbox" name="agree" id="agree">
+            <label>I agree to the Terms of users</label><br><br>
+
+            <button type="submit" onclick="alert('Signed up')" style="background-color: palevioletred; color: gainsboro;">Sign Up</button>
+
+        </div>
+
+
+    </body>
+</html>
