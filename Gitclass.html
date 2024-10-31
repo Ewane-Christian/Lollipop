@@ -1,157 +1,114 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>GitPract</title>
-        <style>
-            #header {
-                background-color: grey;
-                color: black;
-                text-align: center;
-                padding: 5px;
-            }
-            #section {
-                width: auto;
-                float: left;
-                padding: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="header">
-            <h2>FIRST TIRM 2019/2020 REPORT CARD</h2>
+<head>
+    <title>GitPract</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen" x-data="{
+    student: {
+        name: 'INABASI VICTOR EKAENANG',
+        scores: [
+            {subject: 'Gmaths', cat1: 6, mpw: 2, cat2: 6, eote: 8, final: 46, grade: 'C'},
+            {subject: 'EngLang', cat1: 6, mpw: 2, cat2: 6, eote: 8, final: 46, grade: 'A'},
+            {subject: 'GenSC', cat1: 6, mpw: 2, cat2: 6, eote: 8, final: 46, grade: 'A+'},
+            {subject: 'NigLang', cat1: 6, mpw: 2, cat2: 6, eote: 8, final: 46, grade: 'A'},
+            {subject: 'CSC', cat1: 45, mpw: 2, cat2: 6, eote: 8, final: 46, grade: 'A+'},
+            {subject: 'CreaArts', cat1: 6, mpw: 2, cat2: 6, eote: 8, final: 46, grade: 'A'},
+            {subject: 'Quant', cat1: 6, mpw: 2, cat2: 6, eote: 8, final: 46, grade: 'B'},
+            {subject: 'Diction', cat1: 6, mpw: 2, cat2: 6, eote: 8, final: 46, grade: 'A'},
+            {subject: 'French', cat1: 6, mpw: 2, cat2: 6, eote: 8, final: 46, grade: 'B'}
+        ],
+        coScholastic: [
+            {activity: 'Health and PhysEduc', grade: 'C'},
+            {activity: 'Art Education', grade: 'C'},
+            {activity: 'Discipline', grade: 'C'}
+        ]
+    }
+}">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-3xl font-bold text-center">FIRST TERM 2019/2020 REPORT CARD</h2>
         </div>
         
-        <label> Student name:</label><br>
-    INABASI VICTOR EKAENANG<br><br>
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <label class="text-gray-700 font-semibold">Student name:</label>
+            <p class="text-xl font-bold text-gray-900 mt-2" x-text="student.name"></p>
+        </div>
 
-<div id="section">
-        <table border="2">
-            <tr>
-                <th>Scholastic Areas</th>
-                <th colspan="6">FIRST TERM</th>
-            </tr>
-            <tr>
-                <td>Subjects</td>
-                <td>cat1<br>(10)</td>
-                <td>mpw<br>(10)</td>
-                <td>cat2<br>(10)</td>
-                <td>eote<br>(70)</td>
-                <td>Final score<br>(100)</td>
-                <td>Grade</td>
-            </tr>
-            <tr>
-                <td>Gmaths</td>
-                <td>6</td>
-                <td>2</td>
-                <td>6</td>
-                <td>8</td>
-                <td>46</td>
-                <td>C</td>
-            </tr>
-            <tr>
-                <td>EngLang</td>
-                <td>6</td>
-                <td>2</td>
-                <td>6</td>
-                <td>8</td>
-                <td>46</td>
-                <td>A</td>
-            </tr>
-            <tr>
-                <td>GenSC</td>
-                <td>6</td>
-                <td>2</td>
-                <td>6</td>
-                <td>8</td>
-                <td>46</td>
-                <td>A+</td>
-            </tr>
-            <tr>
-                <td>NigLang</td>
-                <td>6</td>
-                <td>2</td>
-                <td>6</td>
-                <td>8</td>
-                <td>46</td>
-                <td>A</td>
-            </tr>
-            <tr>
-                <td>CSC</td>
-                <td>45</td>
-                <td>2</td>
-                <td>6</td>
-                <td>8</td>
-                <td>46</td>
-                <td>A+</td>
-            </tr>
-            <tr>
-                <td>CreaArts</td>
-                <td>6</td>
-                <td>2</td>
-                <td>6</td>
-                <td>8</td>
-                <td>46</td>
-                <td>A</td>
-            </tr>
-            <tr>
-                <td>Quant</td>
-                <td>6</td>
-                <td>2</td>
-                <td>6</td>
-                <td>8</td>
-                <td>46</td>
-                <td>B</td>
-            </tr>
-            <tr>
-                <td>Diction</td>
-                <td>6</td>
-                <td>2</td>
-                <td>6</td>
-                <td>8</td>
-                <td>46</td>
-                <td>A</td>
-            </tr>
-            <tr>
-                <td>French</td>
-                <td>6</td>
-                <td>2</td>
-                <td>6</td>
-                <td>8</td>
-                <td>46</td>
-                <td>B</td>
-            </tr>
-        </table>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-gray-800 text-white">
+                            <th class="px-4 py-3">Scholastic Areas</th>
+                            <th class="px-4 py-3" colspan="6">FIRST TERM</th>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <th class="px-4 py-2">Subjects</th>
+                            <th class="px-4 py-2">cat1<br>(10)</th>
+                            <th class="px-4 py-2">mpw<br>(10)</th>
+                            <th class="px-4 py-2">cat2<br>(10)</th>
+                            <th class="px-4 py-2">eote<br>(70)</th>
+                            <th class="px-4 py-2">Final score<br>(100)</th>
+                            <th class="px-4 py-2">Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template x-for="score in student.scores" :key="score.subject">
+                            <tr class="border-b hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-2 font-medium" x-text="score.subject"></td>
+                                <td class="px-4 py-2 text-center" x-text="score.cat1"></td>
+                                <td class="px-4 py-2 text-center" x-text="score.mpw"></td>
+                                <td class="px-4 py-2 text-center" x-text="score.cat2"></td>
+                                <td class="px-4 py-2 text-center" x-text="score.eote"></td>
+                                <td class="px-4 py-2 text-center" x-text="score.final"></td>
+                                <td class="px-4 py-2 text-center font-bold" 
+                                    :class="{
+                                        'text-green-600': score.grade.includes('A'),
+                                        'text-blue-600': score.grade.includes('B'),
+                                        'text-yellow-600': score.grade.includes('C')
+                                    }"
+                                    x-text="score.grade"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-gray-800 text-white">
+                                <th class="px-4 py-3">CO-SCHOLASTIC</th>
+                                <th class="px-4 py-3">FIRST TERM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template x-for="item in student.coScholastic" :key="item.activity">
+                                <tr class="border-b hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-2 font-medium" x-text="item.activity"></td>
+                                    <td class="px-4 py-2 text-center font-bold" x-text="item.grade"></td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gray-800 text-white px-4 py-3">
+                        <h3 class="font-bold">HEAD TEACHER</h3>
+                    </div>
+                    <div class="p-4">
+                        <p class="font-bold mb-2">END OF TERM EXAMINATION:</p>
+                        <p class="text-gray-700">Excellent performance, keep it up INABASI.</p>
+                        <p class="text-gray-700 mt-2">NEXT TERM FEES: N15,000.00</p>
+                        <p class="text-gray-700">RESUMPTION 6th January 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div id="section">
-        <table border="2">
-            <tr>
-                <th>CO-SCHOSLATIC</th>
-                <th>FIRST TERM</th>
-            </tr>
-            <tr>
-                <th>Health and PhysEduc</th>
-                <th>C</th>
-            </tr>
-            <tr>
-                <th>Art Education</th>
-                <th>C</th>
-            </tr>
-            <tr>
-                <th>Discipline</th>
-                <th>C</th>
-            </tr>
-        </table><br>
-
-        <table border="2">
-            <tr>
-                <th>HEAD TEACHER</th>
-            </tr>
-            <tr>
-                <td><b>END OF TERM EXAMINATION :</b> Excellent<br>
-                performance, keep it up INABASI. NEXT TERM<br>
-                FEES: N15,000.00. RESUMPTION 6th January 2020</td>
-            </tr>
-        </table>
-    </div>
-    </body>
+</body>
 </html>

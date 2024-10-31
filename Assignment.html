@@ -1,181 +1,196 @@
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <title>Assignment</title>
+          <script src="https://cdn.tailwindcss.com"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      </head>
 
-<!--=====================Form 2======================-->
-<html>
-    <head>
-        <title>Assignment</title>
-   </head>
+      <body class="bg-gray-100">
+          <div class="container mx-auto p-8" x-data="{ formSubmitted: false }">
+              <form @submit.prevent="formSubmitted = true" class="max-w-2xl mx-auto bg-white rounded-lg shadow-xl p-8">
+                  <fieldset>
+                      <h3 class="text-2xl font-bold text-orange-600 mb-6">Personal Details</h3>
 
-    <body>
-        <div style="background-color: greenyellow;">
-        <form action="#" method="post">
-            <center>
-                <fieldset>
-                    <h3><font style="color: orangered;">Personal Details</font></h3><br>
+                      <div class="space-y-4">
+                          <div class="flex flex-col">
+                              <label class="text-gray-700 mb-2">Name:</label>
+                              <input type="text" id="name" class="form-input rounded-md border-gray-300 focus:border-orange-500 focus:ring focus:ring-orange-200" required>
+                          </div>
 
-                    <label>Name:</label>
-                    <input type="text" id="name" required><br><br>
+                          <div class="flex flex-col">
+                              <label class="text-gray-700 mb-2">Password:</label>
+                              <input type="password" id="password" class="form-input rounded-md border-gray-300 focus:border-orange-500 focus:ring focus:ring-orange-200" required>
+                          </div>
 
-                    <label>Password:</label>
-                    <input type="password" id="password" required><br><br>
-                    
-                    <label>E-mail id:</label>
-                    <input type="email" id="email" required><br><br>
+                          <div class="flex flex-col">
+                              <label class="text-gray-700 mb-2">E-mail id:</label>
+                              <input type="email" id="email" class="form-input rounded-md border-gray-300 focus:border-orange-500 focus:ring focus:ring-orange-200" required>
+                          </div>
 
-                    <label>Gender:</label>
-                    <input type="radio" name="gender" id="male">
-                    <label for="male">Male</label>
+                          <div class="flex items-center space-x-4">
+                              <label class="text-gray-700">Gender:</label>
+                              <div class="flex space-x-4">
+                                  <label class="inline-flex items-center">
+                                      <input type="radio" name="gender" id="male" class="form-radio text-orange-600">
+                                      <span class="ml-2">Male</span>
+                                  </label>
+                                  <label class="inline-flex items-center">
+                                      <input type="radio" name="gender" id="female" class="form-radio text-orange-600">
+                                      <span class="ml-2">Female</span>
+                                  </label>
+                              </div>
+                          </div>
 
-                    <input type="radio" name="gender" id="female">
-                    <label for="female">Female</label><br><br>
+                          <div class="flex flex-col">
+                              <label class="text-gray-700 mb-2">Contact#:</label>
+                              <input type="tel" id="tel" class="form-input rounded-md border-gray-300 focus:border-orange-500 focus:ring focus:ring-orange-200" required>
+                          </div>
+                      </div>
 
-                    <label>Contact#:</label>
-                    <input type="tel" id="tel" required><br><br>
+                      <h3 class="text-2xl font-bold text-orange-600 mt-8 mb-6">Educational Qualification</h3>
 
-                    <h3><font style="color: orangered;">Educational Qualification</font></h3><br>
+                      <div class="space-y-4">
+                          <div class="flex flex-col">
+                              <label class="text-gray-700 mb-2">Degree:</label>
+                              <select name="degree" id="degree" class="form-select rounded-md border-gray-300 focus:border-orange-500 focus:ring focus:ring-orange-200">
+                                  <option>--Select Group--</option>
+                                  <option>Common Entrance</option>
+                                  <option>Ordinary Level</option>
+                                  <option>Advanced Level</option>
+                                  <option>HND degree</option>
+                                  <option>Bachelors degree</option>
+                                  <option>Masters degree</option>
+                                  <option>Doctorate degree</option>
+                                  <option>Professor degree</option>
+                              </select>
+                          </div>
 
-                    <label>Degree:</label>
-                    <select name="degree" id="degree">
-                        <option>--Select Group--</option>
-                        <option>common Entrance</option>
-                        <option>Ordinary Level</option>
-                        <option>Advanced Level</option>
-                        <option>HND degree</option>
-                        <option>Bachelors degree</option>
-                        <option>Masters degree</option>
-                        <option>Doctorate degree</option>
-                        <option>Professor degree</option>
-                    </select><br><br>
+                          <div class="flex flex-col">
+                              <label class="text-gray-700 mb-2">Engineering:</label>
+                              <select name="engineering" id="engineering" class="form-select rounded-md border-gray-300 focus:border-orange-500 focus:ring focus:ring-orange-200">
+                                  <option>--Select Group--</option>
+                                  <option>Software Engineering</option>
+                                  <option>Computer Engineering</option>
+                                  <option>Information Technology</option>
+                                  <option>MIS</option>
+                              </select>
+                          </div>
 
-                    <label>Engineering:</label>
-                    <select name="engineering" id="engineering">
-                        <option>--Select Group--</option>
-                        <option>Software Engineering</option>
-                        <option>Computer Engineering</option>
-                        <option>Information Technology</option>
-                        <option>MIS</option>
-                    </select><br><br>
+                          <div class="space-y-2">
+                              <label class="text-gray-700">Hobbies:</label>
+                              <div class="flex space-x-4">
+                                  <label class="inline-flex items-center">
+                                      <input type="checkbox" name="pc" id="pc" class="form-checkbox text-orange-600">
+                                      <span class="ml-2">Playing chess</span>
+                                  </label>
+                                  <label class="inline-flex items-center">
+                                      <input type="checkbox" name="rb" id="rb" class="form-checkbox text-orange-600">
+                                      <span class="ml-2">Reading Books</span>
+                                  </label>
+                              </div>
+                          </div>
 
-                    <label>Hobbies:</label>
+                          <div class="flex flex-col">
+                              <h4 class="text-xl font-semibold text-orange-600 mb-2">Address</h4>
+                              <textarea name="addr" id="addr" rows="3" class="form-textarea rounded-md border-gray-300 focus:border-orange-500 focus:ring focus:ring-orange-200"></textarea>
+                          </div>
 
-                    <input type="checkbox" name="pc" id="pc">
-                    <label>Playing chess</label>
+                          <div class="flex flex-col">
+                              <label class="text-gray-700 mb-2">Attach Resume:</label>
+                              <input type="file" name="ar" id="ar" class="form-input rounded-md border-gray-300 focus:border-orange-500 focus:ring focus:ring-orange-200">
+                          </div>
 
-                    <input type="checkbox" name="rb" id="rb"><br><br>
-                    <label>Reading Books</label>
+                          <button type="submit" class="w-full bg-orange-600 text-white py-2 px-4 rounded-md hover:bg-orange-700 transition duration-200">
+                              Submit
+                          </button>
 
-                    <h4 style="color: orangered;">Address</h4><br>
-                    <textarea name="addr" id="addr" cols="20" rows="3"></textarea><br><br>
+                          <div x-show="formSubmitted" class="mt-4 p-4 bg-green-100 text-green-700 rounded-md">
+                              Form submitted successfully!
+                          </div>
+                      </div>
+                  </fieldset>
+              </form>
+          </div>
 
-                    <label>Attch Resume:</label>
-                    <input type="file" name="ar" id="ar"><br><br>
+          <div class="container mx-auto p-8">
+              <table class="w-full border-collapse border-4 border-gray-300">
+                  <thead>
+                      <tr>
+                          <th class="border-4 border-gray-300 p-2" rowspan="4">Day</th>
+                          <th class="border-4 border-gray-300 p-2" colspan="3">Seminar</th>
+                      </tr>
+                      <tr>
+                          <th class="border-4 border-gray-300 p-2" colspan="2">Schedule</th>
+                          <th class="border-4 border-gray-300 p-2" rowspan="2">Topic</th>
+                      </tr>
+                      <tr>
+                          <th class="border-4 border-gray-300 p-2">Begin</th>
+                          <th class="border-4 border-gray-300 p-2">End</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td class="border-4 border-gray-300 p-2" rowspan="2">Monday</td>
+                          <td class="border-4 border-gray-300 p-2 bg-amber-100" rowspan="2">8:00 a.m.</td>
+                          <td class="border-4 border-gray-300 p-2 bg-violet-200" rowspan="2">5:00 p.m.</td>
+                          <td class="border-4 border-gray-300 p-2">Introduction to XML</td>
+                      </tr>
+                      <tr>
+                          <td class="border-4 border-gray-300 p-2">Validity: DTD and Relax NG</td>
+                      </tr>
+                      <!-- Similar styling for other rows -->
+                  </tbody>
+              </table>
+          </div>
 
-                    <button type="button" value="submit" onclick="alert ('Form sent')" 
-                    style="color: white; background-color: orangered;">Submit</button>
+          <div class="container mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-8" x-data="{ signupSubmitted: false }">
+              <div>
+                  <img src="Image/5gball.jpg" alt="The Boys" class="w-full h-auto rounded-lg shadow-lg">
+              </div>
 
-                </fieldset>
-            </center>
-        </form></div>
+              <div class="bg-white p-8 rounded-lg shadow-xl">
+                  <h2 class="text-3xl font-bold mb-6">Sign Up</h2>
+                  <form @submit.prevent="signupSubmitted = true" class="space-y-4">
+                      <div class="flex flex-col">
+                          <label class="text-gray-700 mb-2">Full Name</label>
+                          <input type="text" id="fname" placeholder="Name..." class="form-input border-b-2 border-gray-300 focus:border-orange-500 focus:ring-0" required>
+                      </div>
 
-<!--===========================test===============================-->
-                    <label>Password:</label><br>
-                    <input type="password" id="password" style="border-top: none;border-right: none; border-left: none;" required><br><br>
-                    <input type="text" name="username" pattern="[a-zA-Z0-9]{4,10}"><hr><hr>
-<br><br>
-<!--=============================Table=============================-->
+                      <div class="flex flex-col">
+                          <label class="text-gray-700 mb-2">Email</label>
+                          <input type="email" id="email" placeholder="Email address" class="form-input border-b-2 border-gray-300 focus:border-orange-500 focus:ring-0" required>
+                      </div>
 
-        <center><table border="4">
-            <tr>
-                <th rowspan="4">Day</th>
-            </tr>
+                      <div class="flex flex-col">
+                          <label class="text-gray-700 mb-2">Username</label>
+                          <input type="text" id="uname" placeholder="Username..." class="form-input border-b-2 border-gray-300 focus:border-orange-500 focus:ring-0" required>
+                      </div>
 
-            <tr>
-                <th colspan="3">Seminar</th>
-            </tr>
+                      <div class="flex flex-col">
+                          <label class="text-gray-700 mb-2">Password</label>
+                          <input type="password" id="password" placeholder="*************" class="form-input border-b-2 border-gray-300 focus:border-orange-500 focus:ring-0" required>
+                      </div>
 
-            <tr>
-                <th colspan="2">Schedule</th>
-                <th rowspan="2">Topic</th>
-            </tr>
+                      <div class="flex flex-col">
+                          <label class="text-gray-700 mb-2">Repeat Password</label>
+                          <input type="password" id="password_confirmation" placeholder="*************" class="form-input border-b-2 border-gray-300 focus:border-orange-500 focus:ring-0" required>
+                      </div>
 
-            <tr>
-                <th>Begin</th>
-                <th>End</th>
-            </tr>
+                      <div class="flex items-center">
+                          <input type="checkbox" name="agree" id="agree" class="form-checkbox text-orange-600">
+                          <label class="ml-2">I agree to the Terms of users</label>
+                      </div>
 
-            <tr>
-                <td rowspan="2">Monday</td>
-                <td rowspan="2" style="background-color:wheat;">8:00 a.m.</td>
-                <td rowspan="2" style="background-color:violet;">5:00 p.m.</td>
-                <td>Introduction to XML</td>
-            </tr>
+                      <button type="submit" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md hover:bg-pink-600 transition duration-200">
+                          Sign Up
+                      </button>
 
-            <tr>
-                <td>Validity: DTD and Relax NG</td>
-            </tr>
-
-            <tr>
-                <td rowspan="3">Tuesday</td>
-                <td style="background-color:wheat;">8:00 a.m.</td>
-                <td style="background-color:wheat;">11:00 a.m.</td>
-                <td rowspan="1" style="text-align: center;">XPath</td>              
-            </tr>
-                <td style="background-color:wheat;">11:00 a.m.</td>
-                <td style="background-color:yellowgreen;">2:00 p.m.</td>
-                <td rowspan="2">XSL Transformations</td>
-            <tr>
-                <td style="background-color:yellowgreen;">2:00 p.m.</td>
-                <td style="background-color:violet;">5:00 p.m.</td>
-            </tr>
-
-            <tr>
-                <td>Wednesday</td>
-                <td style="background-color:wheat;">8:00 a.m.</td>
-                <td style="background-color:yellowgreen;">12:00 p.m.</td>
-                <td rowspan="1">XSL Formatting Objects</td>
-            </tr>            
-        </table></center>
-<br><br><hr><hr>
-
-<!--===========================test===============================-->
-<br><br>
-
-        <style>
-            section{
-                width: auto;
-                float: left;
-                padding: 0px;                
-            }
-        </style>
-
-        <div id="section">
-            <img src="Image/5gball.jpg" alt="The Boys" width="auto" height="auto">
-        </div>
-
-        <div id="section">
-            <h2>Sign Up</h2><br>
-
-            <label>Full Name</label><br>
-            <input type="text" id="fname" placeholder="Name..." style="border-top: none;border-right: none; border-left: none;" required><br><br>
-
-            <label>Email</label><br>
-            <input type="email" id="email" placeholder="Email address" style="border-top: none;border-right: none; border-left: none;" required><br><br>
-
-            <label>Username</label><br>
-            <input type="text" id="uname" placeholder="Username..." style="border-top: none;border-right: none; border-left: none;" required><br><br>
-
-            <label>Password</label><br>
-            <input type="password" id="password" placeholder="*************" style="border-top: none;border-right: none; border-left: none;" required><br><br>
-
-            <label>Repeat Password</label><br>
-            <input type="password" id="password" placeholder="*************" style="border-top: none;border-right: none; border-left: none;" required><br><br>
-
-            <input type="checkbox" name="agree" id="agree">
-            <label>I agree to the Terms of users</label><br><br>
-
-            <button type="submit" onclick="alert('Signed up')" style="background-color: palevioletred; color: gainsboro;">Sign Up</button>
-
-        </div>
-
-
-    </body>
-</html>
+                      <div x-show="signupSubmitted" class="mt-4 p-4 bg-green-100 text-green-700 rounded-md">
+                          Signed up successfully!
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </body>
+  </html>
